@@ -127,7 +127,7 @@ angular.module('angular-content-editable')
 
         // if element value is different from model value
         if( html != ngModel.$modelValue ) {
-          
+
           // if user defined strip-replace variable
           if( stripReplace ){
             if( angular.isString(stripReplace) ) {
@@ -145,7 +145,7 @@ angular.module('angular-content-editable')
             // update elem html value
             elem.html(html);
           }
-          
+
           /**
           * This method should be called
           * when a controller wants to
@@ -159,7 +159,7 @@ angular.module('angular-content-editable')
 
             // run the callback with arguments: current text and element
             return callback({
-              text: html,
+              text: elem.text(),
               elem: elem
             });
 
